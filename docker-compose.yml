@@ -6,7 +6,7 @@ services:
     links:
       - db
     ports:
-      - 8080:8080
+      - 80:80
 
   db:
     container_name: postgres

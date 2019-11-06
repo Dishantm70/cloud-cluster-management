@@ -1,11 +1,21 @@
-Code for a creating a docker app with Flask and MySQL tutorial
+# Cloud Cluster Management
 
-See:
-https://medium.com/@shamir.stav_83310/dockerizing-a-flask-mysql-app-with-docker-compose-c4f51d20b40d
+A Dockerised Python-Flask-PostgreSQL application for managing your clusters and instances in the cloud.
 
-## GitLab CI
+## Installation
 
-The [.gitlab-ci.yml](.gitlab-ci.yml) file can be used in GitLab to build,
-test, and deploy the code, as in https://gitlab.com/TrendDotFarm/docker-tutorial
-For more information, read the [Docker Compose Integration to GitLab
-CI](GitLab-CI.md) guide.
+Install [docker](https://docs.docker.com/install)
+Install [docker-compose](https://docs.docker.com/compose/install/)
+
+Run the following command in the root directory
+
+```bash
+docker-compose up
+```
+Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)

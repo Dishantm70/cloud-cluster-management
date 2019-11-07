@@ -74,7 +74,11 @@ class Machine(db.Model):
 
 	@classmethod
 	def existsName(cls,clusterId,machineName):
-		return cls.query.filter_by(clusterId=clusterId,machineName=machineName).first()
+		return cls.query.filter_by(clusterId=clusterId,machineName=machineName).first()\
+
+	@classmethod
+	def existsIp(cls,ipAddress):
+		return cls.query.filter_by(ipAddress=ipAddress).first()
 
 	@classmethod
 	def list(cls, clusterId,machineId=None,tag=None):

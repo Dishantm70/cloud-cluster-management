@@ -103,6 +103,8 @@ def machinesService(**kwargs):
 				return jsonify({"success": False, "error": "machineName required"}), 400
 			if Machine.existsName(cluster_id,machine_name):
 				return jsonify({"success": False, "error": "machineName already exists"}), 409
+			if Machine.existsIp(ip_address):
+				return jsonify({"success": False, "error": "IP already exists"}), 409
 			if type(machine.get('tags',[])) != list:
 				return jsonify({"success": False, "error": "tags must be a list"}), 400
 			if status is not None and status not in ALLOWED_STATUSES:

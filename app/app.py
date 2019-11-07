@@ -25,7 +25,7 @@ app = create_app()
 
 @app.route("/", methods=["GET"])
 def indexService():
-	return "Hello there! Read <a href=https://documenter.getpostman.com/view/9395373/SW17RafH?version=latest#9e0e3bc6-9b1e-4a2a-aa5a-58bf7119450d>this</a> documentation to start!"
+	return "<h1>Welcome to cluster management!</h1> Read <a href=https://documenter.getpostman.com/view/9395373/SW17RafH?version=latest#9e0e3bc6-9b1e-4a2a-aa5a-58bf7119450d>this</a> documentation to start!"
 
 @app.route("/clusters", methods=["GET","POST"])
 @app.route("/clusters/<clusterId>", methods=["GET","POST","DELETE"])

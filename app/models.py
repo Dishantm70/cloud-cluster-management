@@ -49,7 +49,6 @@ class Cluster(db.Model):
 		obj = cls.query.filter(cls.id==clusterId).first()
 		if obj:
 			for machine in Machine.list(clusterId):
-				machine.delete()
 				db.session.delete(machine)
 			db.session.delete(obj)
 			db.session.commit()
